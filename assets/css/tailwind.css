@@ -13,3 +13,47 @@ body {
     color: #ffffff;
     /* font-family: "Barlow Condensed", sans-serif; */
 }
+
+/* Animation -start */
+.pill {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The squares */
+.item {
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+}
+
+/* Position items during expansion */
+.pill.expand .item:nth-child(1) {
+    /* Leftmost */
+    transform: translateX(-400px);
+}
+
+.pill.expand .item:nth-child(2) {
+    /* Slightly left */
+    transform: translateX(-130px);
+}
+
+.pill.expand .item:nth-child(3) {
+    /* Slightly right */
+    transform: translateX(130px);
+}
+
+.pill.expand .item:nth-child(4) {
+    /* Rightmost */
+    transform: translateX(400px);
+}
+
+/* Collapse to the middle */
+.pill.shrink .item {
+    transform: translateX(0);
+}
+
+/* Animation -end */
